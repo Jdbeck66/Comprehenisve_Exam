@@ -32,8 +32,8 @@ using StatsPlots
 """
 makeNodeTuples(L)
 
-Creates a list of tuples made up of all unique combinations of distinct nucleotides
-in a 4ᴸ RNA chain.  
+Outputs a list of tuples made up of all unique combinations of 
+distinct nucleotides in a 4ᴸ RNA chain.  
 
 """
 function makeNodeTuples(L)
@@ -45,9 +45,8 @@ end
 """
 makeNode(nodes, L, x)
 
-Creates a string by taking x tuple's initial nucleotide charachter and concatenates 
-all the subsequent characters in the tuple (nodes) of length L - this function is only used by the function
-makeNodeList.  
+Outputs a string concatenated from characters in the tuple (nodes)
+of length L - this function is only used by the function makeNodeList.  
 
 """
 function makeNode(nodes, L,x)
@@ -61,7 +60,7 @@ end
 """
 makeNodeList(nodes)
 
-Creates an array of all the possible nucleotide combinations.  
+Outputs an array of all the possible nucleotide combinations.  
 
 """
 function makeNodeList(nodes)
@@ -77,7 +76,8 @@ end
 """
 addFitnessValues(fileName)
 
-import file of fitness values return a dictionary of nucleotide and fitness value.  
+Import file of fitness values return a dictionary of nucleotide   
+and fitness value.
 
 """
 function addFitnessValues(fileName)
@@ -97,13 +97,23 @@ function addFitnessValues(fileName)
     return fvDict
 end
 
+"""
+graphExampleCircle(L)
+
+Output a circular graph layout for sequence of length L
+"""
 function graphExampleCircle(L)
     nodes₁ = makeNodeTuples(L);
     adjMatrix₁,null = makeAdjMatrix(nodes₁)
     graph₁=Graph(adjMatrix₁)
     gplot(graph₁,nodefillc="orange", layout=circular_layout, nodelabel=makeNodeList(nodes₁))
 end
+"""
+graphExample(L)
 
+Output graph layout for sequence of length L
+
+"""
 function graphExample(L)
     nodes₁ = makeNodeTuples(L);
     adjMatrix₁,null = makeAdjMatrix(nodes₁)
@@ -118,8 +128,8 @@ end
 """
 makeAdjMatrix(nodes)
 
-Creates an adjacency matrix of all the possible nucleotide combinations that are one 
-mutation away from each other.  
+Ouput an adjacency matrix of all the possible nucleotide combinations (nodes)  
+that are one mutation away from each other.
 
 """
 function makeAdjMatrix(nodes)
@@ -146,8 +156,8 @@ end
 """
 makeFitAdjMatrix(nodes)
 
-Creates an adjacency matrix of all the possible nucleotide combinations that are one 
-mutation away from each other.  
+Creates an adjacency matrix of all the possible nucleotide combinations (nodes) 
+that are one mutation away from each other.  
 
 """
 function makeFitAdjMatrix(nodes)
@@ -209,7 +219,7 @@ end
 """
 makePath(startNode, endNode)
 
-Creates an array of a random path between the startNode and endNode
+Outputs an array of a random path between the startNode and endNode
 
 """
 function makePath(startNode, endNode, nodeList, adjMatrix)
@@ -228,9 +238,9 @@ end
 """
 identifyPaths(iter, startNode, endNode, nodeList, rndMatrix, adjMatrix, rndEdge)
 
-Creates arrays of counts and paths for an 'iter' number of random paths between 
+Outputs arrays of counts and paths for an 'iter' number of random paths between 
 the startNode and endNode, using the adjMatrix to guide the random options. Set rndEdge
-flag to 1 to add a rnd edge, found within rndMatrix.
+flag to 1 to add a single random edge more than mutation away.
 
 """
 function identifyPaths(iter, startNode, endNode, nodeList, rndMatrix, adjMatrix, randEdge = 0)
@@ -266,7 +276,7 @@ end
 """
 makeFitPath(startNode, endNode, nodeList, adjMatrix)
 
-Creates an array of a random path between the startNode and endNode
+Outputs an array of a random path between the startNode and endNode
 using the nodes within nodList
 
 """
@@ -292,7 +302,7 @@ end
 """
 identifyFitnessPaths(iter, startNode, endNode, nodeList, fitMatrix)
 
-Creates arrays of counts and paths for a 'iter' number of random path between 
+Outputs arrays of counts and paths for a 'iter' number of random path between 
 the startNode and endNode using the path options within the fitMatrix
 
 """
