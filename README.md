@@ -1,7 +1,7 @@
 # Comprehensive Exam - Coding Artifact 
 ## Fitness Landscape Analysis
 
-### Help available using "? command" for fitness_model.jl functions:
+### Help available using "? *functionName*" for fitness_model.jl functions:
 
 * addFitnessValues
 * findShortPathNodes
