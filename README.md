@@ -3,9 +3,9 @@
 
 ### Help available using "? command" for:
 
-addFitnessValues
+* addFitnessValues
 
-findShortPathNodes
+* findShortPathNodes
 
 graphExampleCircle
 graphExample
