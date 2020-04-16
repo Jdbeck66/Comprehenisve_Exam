@@ -1,25 +1,20 @@
 # Comprehensive Exam - Coding Artifact 
 ## Fitness Landscape Analysis
 
-### Help available using "? command" for:
+### Help available using "? command" for fitness_model.jl functions:
 
 * addFitnessValues
-
 * findShortPathNodes
-
-graphExampleCircle
-graphExample
-
-identifyFitnessPaths
-identifyPaths
-
-makeAdjMatrix
-makeFitAdjMatrix
-makeFitPath
-makeNode
-makeNodeList
-makeNodeTuples
-makePath
-makeRandomMutation
-
-shortPath
+* graphExample
+* graphExampleCircle
+* identifyFitnessPaths
+* identifyPaths
+* makeAdjMatrix
+* makeFitAdjMatrix
+* makeFitPath
+* makeNode
+* makeNodeList
+* makeNodeTuples
+* makePath
+* makeRandomMutation
+* shortPath
